@@ -1,9 +1,8 @@
-FMCG Data Consolidation & Analytics Lakehouse
+### FMCG Data Consolidation & Analytics Lakehouse
 
-Project Context:
 A major retail entity (Atliquon) acquired a smaller competitor (SportsBar). Developed a scalable ETL pipeline to consolidate 10,000+ transactional records into a unified Lakehouse Architecture on AWS S3. The project resolves the critical business challenge of "Data Silos" following a merger, establishing a Single Source of Truth for executive decision-making.
 
-Technical Architecture & Data Flow
+## Technical Architecture & Data Flow
 The project follows the Medallion Architecture, ensuring incremental data quality and reliability as records move from raw storage to a business-ready dashboard.
 
 Phase 1: Ingestion & Bronze Layer (The Landing Zone)
@@ -26,18 +25,18 @@ Designed for high-performance querying and business intelligence:
 - Performance Optimization: Utilized Delta Lake partitioning (by Year/Month) and Z-Ordering on product keys, reducing query latency by 80%.
 - Final Serving: Aggregated key metrics such as Combined Sales Performance and Inventory-to-Sales Ratios.
 
-Tech Stack
+## Tech Stack
 Languages: Python (PySpark), SQL.
 Tools: Apache Spark (Databricks) for distributed processing.
 Storage: Amazon S3 (Data Lake) utilizing Delta Lake format for ACID compliance.
 Visualization: Databricks SQL Dashboards for real-time monitoring.
 
-Key Results & Business Impact
+## Key Results & Business Impact
 - 75% Faster Time-to-Insight: Replaced manual reporting with a self-service analytics model.
 - 10+ Hours Saved Weekly: Automated the reconciliation of a full year of historical data.
 - Unified Revenue Reporting: Generated a single dashboard showing a total revenue of 119.93B and 101.11K total customers across both the entities.
 
-Dashboard Visuals
+## Dashboard Visuals
 The end-state of the pipeline is an interactive Databricks Business Analytics dashboard that provides a 360-degree view of the merged company’s health.
 
 
