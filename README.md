@@ -71,6 +71,7 @@ Visualization: Databricks SQL Dashboards for real-time monitoring.
 ## Dashboard Visuals
 The end-state of the pipeline is an interactive Databricks Business Analytics dashboard that provides a 360-degree view of the merged company’s health.
 
+![Project Dashboard](docs/dashboard.png)
 
 
 
