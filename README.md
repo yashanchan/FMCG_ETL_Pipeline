@@ -25,38 +25,8 @@ Designed for high-performance querying and business intelligence:
 - Performance Optimization: Utilized Delta Lake partitioning and De-normalization, reducing query latency by 80%.
 - Final Serving: Aggregated key metrics such as Combined Sales Performance and Inventory-to-Sales Ratios.
 
-```mermaid
-graph LR
-    subgraph AWS_Cloud [AWS Cloud]
-        S3[(S3 Bucket: Source Data)]
-        style S3 fill:#FF9900,stroke:#232F3E,color:white
-    end
+![Architecture Diagram](docs/architecture.png)
 
-    subgraph Databricks_Workspace [Databricks Workspace: Spark Engine]
-        direction LR
-        
-        B[<b>Phase 1: Bronze Layer</b><br/>Raw Delta Tables<br/>10,000+ Records]
-        S[<b>Phase 2: Silver Layer</b><br/>Schema Alignment<br/>Deduplication<br/>99.5% Accuracy]
-        G[<b>Phase 3: Gold Layer</b><br/>Denormalized Fact Tables<br/>Partitioned by Year/Month<br/>80% Latency Reduction]
-
-        style B fill:#CD7F32,color:white
-        style S fill:#C0C0C0,color:black
-        style G fill:#FFD700,color:black
-    end
-
-    subgraph Consumption_Layer [Consumption Layer]
-        DASH[Databricks SQL Dashboard]
-        PBI[Power BI]
-        style DASH fill:#E24330,color:white
-        style PBI fill:#F2C811,color:black
-    end
-
-    S3 -- "PySpark Ingestion" --> B
-    B -- "Cleaning & Transformation" --> S
-    S -- "Aggregation & Joins" --> G
-    G -- "SQL Query" --> DASH
-    G -- "DirectQuery" --> PBI
-```
 ## Tech Stack
 Languages: Python (PySpark), SQL.
 Tools: Apache Spark (Databricks) for distributed processing.
