@@ -25,13 +25,12 @@ Designed for high-performance querying and business intelligence:
 - Performance Optimization: Utilized Delta Lake partitioning and De-normalization, reducing query latency by 80%.
 - Final Serving: Aggregated key metrics such as Combined Sales Performance and Inventory-to-Sales Ratios.
 
-![Architecture Diagram](docs/architecture.png)
 
 ## Tech Stack
-Languages: Python (PySpark), SQL.
-Tools: Apache Spark (Databricks) for distributed processing.
-Storage: Amazon S3 (Data Lake) utilizing Delta Lake format for ACID compliance.
-Visualization: Databricks SQL Dashboards for real-time monitoring.
+- Languages: Python (PySpark), SQL.
+- Tools: Apache Spark (Databricks) for distributed processing.
+- Storage: Amazon S3 (Data Lake) utilizing Delta Lake format for ACID compliance.
+- Visualization: Databricks SQL Dashboards for real-time monitoring.
 
 ## Key Results & Business Impact
 - 75% Faster Time-to-Insight: Replaced manual reporting with a self-service analytics model.
@@ -48,3 +47,5 @@ The end-state of the pipeline is an interactive Databricks Business Analytics da
 
 
 
+
+![Architecture Diagram](docs/architecture.png)
