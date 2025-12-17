@@ -1,4 +1,4 @@
-### FMCG Data Consolidation & Analytics Lakehouse
+## FMCG Data Consolidation & Analytics Lakehouse
 
 A major retail entity (Atliquon) acquired a smaller competitor (SportsBar). Developed a scalable ETL pipeline to consolidate 10,000+ transactional records into a unified Lakehouse Architecture on AWS S3. The project resolves the critical business challenge of "Data Silos" following a merger, establishing a Single Source of Truth for executive decision-making.
 
